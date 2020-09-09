@@ -40,3 +40,6 @@ yarn init -y
 
   ## Configurar prettier
     https://www.notion.so/Prettier-e2c6a3ec188c4cce8890a3e16a0d6425
+
+  ## Pattern de repository
+    Persistencia <-> Repository -> Rota
