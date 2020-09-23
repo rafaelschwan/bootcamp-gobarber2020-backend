@@ -8,6 +8,9 @@ yarn init -y
 	yarn add express
   yarn add uuidv4
   yarn add date-fns
+  yarn add typeorm 
+  yarn add pg
+  yarn add reflect-metadata
 
   ## Desenvolvimento
 	yarn add typescript -D
@@ -40,6 +43,25 @@ yarn init -y
 
   ## Configurar prettier
     https://www.notion.so/Prettier-e2c6a3ec188c4cce8890a3e16a0d6425
+  
+  ## TypeORM
+    Criar ormconfig.json e colocar params de base, porta, host, etc
+    No windows:
+        Abrir o package.json e colar o código 
+          "resolutions": {
+            "tslib": "1.11.2"
+          }
+        Deletar node_modules e rodar yarn novamente
+    Configurar para que o typeorm funcione com arquivos .ts
+      No package.json, incluir nos scripts:
+        "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
+
+# Anotações
 
   ## Pattern de repository
     Persistencia <-> Repository -> Rota
+
+  ## Padrão decorator
+    @Entity por exemplo
+
+  
