@@ -1,5 +1,13 @@
 
-# Para criar o projeto 
+
+## Rotas: pegam request, chamam regras, retornam response
+## Services: rodam a manipulacao de regras de negocio, utilizando um repositorio custom ou o default do typeorm
+## Repositories: criam o repositorio de um model, normalmente custom com funcoes a mais
+
+## Rotas > Services (getRepository)
+## Rotas > Repositories (cria um custom, necessidade de uma funcao nao default) > Services (getCustomRepository)
+
+# Para criar o projeto
 yarn init -y
 
 # Dependências
@@ -8,11 +16,13 @@ yarn init -y
 	yarn add express
   yarn add uuidv4
   yarn add date-fns
-  yarn add typeorm 
+  yarn add typeorm
   yarn add pg
   yarn add reflect-metadata
+  yarn add bcryptjs
 
   ## Desenvolvimento
+  yarn add @types/bcryptjs -D
 	yarn add typescript -D
   yarn add @types/express -D
   yarn add ts-node-dev -D
@@ -28,7 +38,7 @@ yarn init -y
   ## No tsconfig.json
   "outDir": "./dist"
   "rootDir": "./src"
-  
+
   ## No package.json
     "scripts": {
       "build": "tsc",
@@ -43,11 +53,11 @@ yarn init -y
 
   ## Configurar prettier
     https://www.notion.so/Prettier-e2c6a3ec188c4cce8890a3e16a0d6425
-  
+
   ## TypeORM
     Criar ormconfig.json e colocar params de base, porta, host, etc
     No windows:
-        Abrir o package.json e colar o código 
+        Abrir o package.json e colar o código
           "resolutions": {
             "tslib": "1.11.2"
           }
@@ -64,4 +74,3 @@ yarn init -y
   ## Padrão decorator
     @Entity por exemplo
 
-  
