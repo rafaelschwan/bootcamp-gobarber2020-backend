@@ -20,15 +20,17 @@ yarn init -y
   yarn add pg
   yarn add reflect-metadata
   yarn add bcryptjs
+  yarn add jsonwebtoken
 
   ## Desenvolvimento
   yarn add @types/bcryptjs -D
-	yarn add typescript -D
+  	yarn add typescript -D
   yarn add @types/express -D
   yarn add ts-node-dev -D
   yarn add eslint@6.8.0 -D
   yarn add @typescript-eslint/eslint-plugin@latest eslint-config-airbnb-base@latest eslint-plugin-import@^2.21.2 @typescript-eslint/parser@latest -D
   yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
+  yarn add @types/jsonwebtoken -D
 
 # Configurações
 
