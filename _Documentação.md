@@ -21,6 +21,7 @@ yarn init -y
   yarn add reflect-metadata
   yarn add bcryptjs
   yarn add jsonwebtoken
+  yarn add multer
 
   ## Desenvolvimento
   yarn add @types/bcryptjs -D
@@ -31,6 +32,7 @@ yarn init -y
   yarn add @typescript-eslint/eslint-plugin@latest eslint-config-airbnb-base@latest eslint-plugin-import@^2.21.2 @typescript-eslint/parser@latest -D
   yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
   yarn add @types/jsonwebtoken -D
+  yarn add @types/multer -D
 
 # Configurações
 
