@@ -22,6 +22,7 @@ yarn init -y
   yarn add bcryptjs
   yarn add jsonwebtoken
   yarn add multer
+  yarn add express-async-errors
 
   ## Desenvolvimento
   yarn add @types/bcryptjs -D
