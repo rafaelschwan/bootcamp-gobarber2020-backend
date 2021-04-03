@@ -1,24 +1,10 @@
-import { Router } from 'express';
-import multer from 'multer';
-import uploadConfig from '@config/upload';
+import { Request, Response } from 'express';
 import { container } from 'tsyringe';
 
-import UsersController from '../controllers/UsersController';
 import UpdateUserAvatarService from '@modules/users/services/UpdateUserAvatarService';
 
-import ensureAuthenticated from '../middlewares/ensureAuthenticated';
-
-const usersRouter = Router();
-const usersController = new UsersController();
-const upload = multer(uploadConfig);
-
-usersRouter.post('/', usersController.create);
-
-usersRouter.patch(
-  '/avatar',
-  ensureAuthenticated,
-  upload.single('avatar'),
-  async (request, response) => {
+export default class UserAvatarController {
+  public async update(request: Request, response: Response): Promise<Response> {
 
     const UpdateUserAvatar = container.resolve(UpdateUserAvatarService);
 
@@ -38,6 +24,5 @@ usersRouter.patch(
 
     return response.json(userWithoutPassword);
   }
-);
 
-export default usersRouter;
+}

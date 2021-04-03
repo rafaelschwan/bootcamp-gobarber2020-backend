@@ -23,7 +23,13 @@
     "prettier"
   ],
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "semi": true
+      }
+    ],
     "@typescript-eslint/camelcase": "off",
     "no-useless-constructor": "off",
     "@typescript-eslint/no-unused-vars": [
@@ -31,7 +37,7 @@
         "argsIgnorePattern": "_"
       }
     ],
-    "@typescript-eslint/naming-convention": [
+    "@typescript-eslint/interface-name-prefix": [
       "error",
       {
         "selector": "interface",
@@ -40,8 +46,13 @@
       }
     ],
     "class-methods-use-this": "off",
-    "quotes": [
-      "single"
+    "jsx-quotes": [2, "prefer-single"],
+    "@typescript-eslint/quotes": [
+      "error",
+      "single",
+      {
+        "allowTemplateLiterals": true
+      }
     ],
     "import/extensions": [
       "error",
